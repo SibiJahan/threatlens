@@ -167,7 +167,7 @@ function Dashboard() {
                                 <circle cx="50" cy="50" fill="#FF8C00" opacity="0.5" r="15"></circle>
                                 <path d="M35 50 L45 60 L65 40" fill="none" stroke="#0096FF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></path>
                             </svg> */}
-                            <img style={{width: '10%', height: '10%', objectFit: 'contain', transform: 'scale(1.4)'}} src="/images/threatlens_logo_short.png" alt='logo'/>
+                            <img style={{width: '11%', height: '10%',padding:"20px", objectFit: 'contain', transform: 'scale(1.4)'}} src="images/threatlens_logo_short.png"  alt='logo'/>
                             <h1>ThreatLens Core</h1>
                             <p>AI-Powered Threat Intelligence, Analysis &amp; Automation Platform</p>
                             <button id="startBtn" onClick={nextScene}>Start Demo</button>

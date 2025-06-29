@@ -5,7 +5,7 @@ function Header() {
      <header>
         <nav className="container">
             <div className="logo">
-<img style={{width: '100%', height: '80%', objectFit: 'contain', transform: 'scale(1.4)'}} src='/images/threatlens_logo_short.png' alt='logo' />
+<img style={{width: '100%', height: '120%', objectFit: 'contain', transform: 'scale(1.4)'}} src='/images/threatlens_logo.png' alt='logo' />
             </div>
             <ul className="nav-links">
                 <li ><a href="/Dashboard">Features</a></li>

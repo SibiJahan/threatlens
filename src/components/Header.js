@@ -8,8 +8,8 @@ function Header() {
               <img style={{width: '100%', height: '120%', objectFit: 'contain', transform: 'scale(1.4)'}} src="/images/threatlens_logo.png" alt='logo'/>
             </div>
             <ul className="nav-links">
-                <li ><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li ><a href="/Dashboard">Features</a></li>
+                <li ><a href="/Dashboard">Contact</a></li>
             </ul>
             <a href="#waitlist" className="cta-button">Join Waitlist</a>
         </nav>

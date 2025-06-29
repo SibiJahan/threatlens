@@ -47,10 +47,10 @@ const Slider = () => {
     }, interval);
   };
 
-  useEffect(() => {
-    resetTimer();
-    return () => clearTimeout(timeoutRef.current);
-  }, [currentIndex]);
+ useEffect(() => {
+  resetTimer();
+  return () => clearTimeout(timeoutRef.current);
+}, [currentIndex, resetTimer]); // Added resetTimer
 
   const goToPrev = () => {
     clearTimeout(timeoutRef.current);

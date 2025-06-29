@@ -1,9 +1,10 @@
 {
-  "homepage":"https://SibiJahan.github.io/threatlens",
+  "homepage": "https://SibiJahan.github.io/threatlens",
   "name": "threadlens",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -22,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

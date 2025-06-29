@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState,useCallback } from "react";
 import "./Slider.css"; 
 
 const points = [
@@ -34,18 +34,24 @@ const points = [
   },
 ];
 
+
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(null);
   const timeoutRef = useRef(null);
   const interval = 4000;
 
-  const resetTimer = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      goToNext();
-    }, interval);
-  };
+const goToNext = useCallback(() => {
+    clearTimeout(timeoutRef.current);
+    setPrevIndex(currentIndex);
+    setCurrentIndex((prev) => (prev + 1) % points.length);
+  }, [currentIndex]); // Removed points.length as it's a constant
+  const resetTimer = useCallback(() => {
+  if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  timeoutRef.current = setTimeout(() => {
+    goToNext();
+  }, interval);
+}, [goToNext, interval]); // Add dependencies for useCallback
 
  useEffect(() => {
   resetTimer();
@@ -58,11 +64,7 @@ const Slider = () => {
     setCurrentIndex((prev) => (prev - 1 + points.length) % points.length);
   };
 
-  const goToNext = () => {
-    clearTimeout(timeoutRef.current);
-    setPrevIndex(currentIndex);
-    setCurrentIndex((prev) => (prev + 1) % points.length);
-  };
+
 
   return (
     <div className="slider-demo-section">

@@ -429,7 +429,7 @@ nav {
             font-weight: 700; */
 /* width: 100px; */
   height: calc(85px * 0.7); /* Reduce logo height by 30% (approx 59.5px) */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* color: #00ffff;
             text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
             width: 50px;

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/threatlens/static/css/main.edc0d45e.css",
+    "main.js": "/threatlens/static/js/main.df321451.js",
+    "static/js/453.e28d698b.chunk.js": "/threatlens/static/js/453.e28d698b.chunk.js",
+    "index.html": "/threatlens/index.html",
+    "main.edc0d45e.css.map": "/threatlens/static/css/main.edc0d45e.css.map",
+    "main.df321451.js.map": "/threatlens/static/js/main.df321451.js.map",
+    "453.e28d698b.chunk.js.map": "/threatlens/static/js/453.e28d698b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edc0d45e.css",
+    "static/js/main.df321451.js"
+  ]
+}

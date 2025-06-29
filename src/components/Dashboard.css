@@ -1,0 +1,305 @@
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img.scanflow {
+    animation: fadeInZoom 1s ease-in-out forwards;
+    transition: transform 0.3s ease;
+}
+
+img.scanflow:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeInStep {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flow-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flow-step {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    animation: fadeInStep 0.8s ease forwards;
+    opacity: 0;
+}
+
+.flow-step:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.flow-step:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.flow-step:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.flow-step span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.flow-result {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 800px;
+}
+
+.flow-result ul {
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.all {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #00d84a;
+    --blue: #0096ff;
+    --orange: #ff8c00;
+    --gray: #cccccc;
+    --dark-gray: #111111;
+    --white: #ffffff;
+    --accent-green: #00C851;
+    --accent-blue: #0096FF;
+    --accent-orange: #FFA500;
+    --accent-silver: #e0e0e0;
+}
+
+.dbbody {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-container {
+    width: 95%;
+    max-width: 1400px;
+    height: 88%;
+    background: #111;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    /* border: 2px solid #0096FF;*/
+    border: 2px solid var(--accent-orange);
+}
+
+.scene {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    height: 100%;
+    display: none;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.scene.active {
+    display: block;
+}
+
+.scene-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--orange)10%, var(--accent-blue), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0096FF;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00D84A;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 30px;
+    border-radius: 50px;
+    z-index: 100;
+}
+
+button {
+    background: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0080dd;
+    transform: translateY(-2px);
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #0096FF;
+    transition: width 0.3s ease;
+    z-index: 101;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00D84A;
+    margin-bottom: 10px;
+}
+
+.threat-feed {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.threat-item {
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid #ff0066;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.compliance-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.center-content {
+    /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Remove or adjust this line */
+    /* height: 100%; */
+    /* REMOVE THIS LINE */
+    /* Or if you need a minimum height, use min-height based on content/viewport */
+    min-height: 70vh;
+    /* Example: at least 80% of viewport height, adjust as needed */
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+.skip-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+.scene-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #666;
+    font-size: 14px;
+}

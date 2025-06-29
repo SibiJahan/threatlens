@@ -152,14 +152,35 @@ function Dashboard() {
         };
     }, [nextScene, prevScene, togglePlayPause, skip, showScene]);
     return (
+        
         <div className='all'>
+             <div className="controls" style={{
+                //  position: 'absolute',
+                //  bottom: '20px',
+                  left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: '1000' }}>
+                        <button className="controlBtn" id="prevBtn" onClick={prevScene} style={{ background: ' #0096ff', color: 'white',
+                             padding: '10px 20px',
+                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Previous</button>
+                        <button className="controlBtn" id="playPauseBtn" onClick={togglePlayPause} style={{ background: '#6c757d', color: 'white', 
+                            padding: '10px 20px', 
+                            border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                            {isPlaying ? 'Pause' : 'Play'}
+                        </button>
+                        <button className="controlBtn" id="nextBtn" onClick={nextScene} style={{ background: '#0096ff', color: 'white',
+                             padding: '10px 20px',
+                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Next</button>
+                        <button className="controlBtn" id="restartBtn" onClick={restart} style={{ background: '#dc3545', color: 'white', 
+                            padding: '10px 20px',
+                             border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Restart</button>
+                    </div>
             <div className='dbbody'>
                 <div className="demo-container">
-                        <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
+                       
                     <div className="scene-indicator" ref={sceneIndicatorRef}>1 / 15</div>
                     <div className="progress-bar" ref={progressBarRef} style={{ width: "0%" }}></div>
                     {/* */}
                     <div className={currentSceneIndex === 1 ? 'scene active' : 'scene'} id="scene1">
+                         <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="center-content">
                             {/* <svg className="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="none" stroke="#0096FF" strokeWidth="2"></path>
@@ -174,6 +195,7 @@ function Dashboard() {
                         </div>
                     </div>
                     <div className={currentSceneIndex === 2 ? 'scene active' : 'scene'} id="scene2">
+                         <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="center-content">
                             <h1 style={{animation: "fadeIn 1s ease-in-out"}}>ThreatLens Core Engine Powered with LLM</h1>
                             <div className="flow-grid">
@@ -200,6 +222,7 @@ function Dashboard() {
                     </div>
 
                     <div className={currentSceneIndex === 3 ? 'scene active' : 'scene'} id="scene3">
+                         <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Threat Results – AI-Based</h2>
                             <div style={{ background: "rgba(255, 255, 255, 0.05)", padding: "25px", borderRadius: "15px", margin: "20px 0" }}>
@@ -266,6 +289,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                    <div className={currentSceneIndex === 13 ? 'scene active' : 'scene'} id="scene13">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             {/* <h2>Unified Security Dashboard</h2>
                             <div className="metric-grid">
@@ -341,6 +365,7 @@ function Dashboard() {
                         </div>
                     </div>
                     <div className={currentSceneIndex === 4 ? 'scene active' : 'scene'} id="scene4">
+                         <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>AI-Powered Threat Analysis</h2>
                             {/* */}
@@ -478,6 +503,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                    <div className={currentSceneIndex === 5 ? 'scene active' : 'scene'} id="scene5">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Hardware &amp; IoT Security Intelligence</h2>
                             {/* */}
@@ -623,6 +649,7 @@ function Dashboard() {
                         </div>
                     </div>
                    <div className={currentSceneIndex === 6 ? 'scene active' : 'scene'} id="scene6">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Cloud-Native &amp; Container Threat Intelligence</h2>
                             {/* */}
@@ -766,6 +793,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                    <div className={currentSceneIndex === 7 ? 'scene active' : 'scene'} id="scene7">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Real-Time Business Impact Analysis</h2>
                             {/* */}
@@ -900,6 +928,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                     <div className={currentSceneIndex === 8 ? 'scene active' : 'scene'} id="scene8">
+                         <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2 style={{animation: "fadeInZoom 1s ease-in-out forwards"}}>Natural Language Security Assistant</h2>
                             <div style={{ textAlign: 'center', margin: '40px 0' }}>
@@ -974,6 +1003,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                    <div className={currentSceneIndex === 9 ? 'scene active' : 'scene'} id="scene9">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Executive Security Report</h2>
                             <div
@@ -1161,6 +1191,7 @@ function Dashboard() {
                         </div>
                     </div>
                    <div className={currentSceneIndex === 10 ? 'scene active' : 'scene'} id="scene10">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Automated Compliance &amp; Audit Readiness</h2>
                             <div className="compliance-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
@@ -1200,6 +1231,7 @@ function Dashboard() {
                     </div>
                     {/* */}
                   <div className={currentSceneIndex === 11 ? 'scene active' : 'scene'} id="scene11">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Seamless Integrations - Your Entire Stack Protected</h2>
                             <p style={{ textAlign: 'center', marginBottom: '30px' }}>ThreatLens enhances your existing security investments with AI-powered intelligence</p>
@@ -1252,7 +1284,8 @@ function Dashboard() {
                         </div>
                     </div>
                     {/* */}
-                   <div className={currentSceneIndex === 15 ? 'scene active' : 'scene'} id="scene16">
+                   <div className={currentSceneIndex === 15 ? 'scene active' : 'scene'} id="scene15">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="center-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'center', height: '100%' }}>
                             <h1>Your Security Transformation Starts Now</h1>
                             <p style={{ fontSize: '1.5rem', margin: '30px 0' }}>Join 500+ organizations preventing millions in losses with AI</p>
@@ -1302,7 +1335,8 @@ function Dashboard() {
                     {/* */}
 
                     {/* */}
-                   <div className={currentSceneIndex === 12 ? 'scene active' : 'scene'} id="scene14">
+                   <div className={currentSceneIndex === 12 ? 'scene active' : 'scene'} id="scene12">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>ThreatLens Core API &amp; Agent SDK</h2>
                             <p>Build, customize, and automate security workflows using our open integration platform.</p>
@@ -1331,7 +1365,8 @@ function Dashboard() {
                     </div>
 
                     {/* */}
-                   <div className={currentSceneIndex === 14 ? 'scene active' : 'scene'} id="scene15">
+                   <div className={currentSceneIndex === 14 ? 'scene active' : 'scene'} id="scene14">
+                     <button className="skip-btn" id="skipBtn" onClick={handleSkipDemo}>Skip Demo</button>
                         <div className="scene-content">
                             <h2>Low-Code SOC Automation &amp; SOAR Playbooks</h2>
                             <div style={{ background: 'rgba(0, 150, 255, 0.1)', border: '1px solid #0096FF', padding: '25px', borderRadius: '15px', margin: '20px 0' }}>
@@ -1352,25 +1387,7 @@ function Dashboard() {
                 </div>
                 
             </div>
-             <div className="controls" style={{
-                //  position: 'absolute',
-                //  bottom: '20px',
-                  left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: '1000' }}>
-                        <button id="prevBtn" onClick={prevScene} style={{ background: '#007bff', color: 'white',
-                             padding: '10px 20px',
-                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Previous</button>
-                        <button id="playPauseBtn" onClick={togglePlayPause} style={{ background: '#6c757d', color: 'white', 
-                            padding: '10px 20px', 
-                            border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-                            {isPlaying ? 'Pause' : 'Play'}
-                        </button>
-                        <button id="nextBtn" onClick={nextScene} style={{ background: '#007bff', color: 'white',
-                             padding: '10px 20px',
-                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Next</button>
-                        <button id="restartBtn" onClick={restart} style={{ background: '#dc3545', color: 'white', 
-                            padding: '10px 20px',
-                             border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Restart</button>
-                    </div>
+            
         </div>
     )
 }

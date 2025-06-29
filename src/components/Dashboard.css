@@ -170,13 +170,13 @@ p {
 
 .controls {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 30px;
+    /* background: rgba(0, 0, 0, 0.9); */
+    /* padding: 15px 30px; */
     border-radius: 50px;
     z-index: 100;
 }

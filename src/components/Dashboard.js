@@ -1274,14 +1274,7 @@ function Dashboard() {
                         </div>
                     </div>
                     {/* */}
-                     <div className="controls" style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: '1000' }}>
-                        <button id="prevBtn" onClick={prevScene} style={{ background: '#007bff', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Previous</button>
-                        <button id="playPauseBtn" onClick={togglePlayPause} style={{ background: '#6c757d', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-                            {isPlaying ? 'Pause' : 'Play'}
-                        </button>
-                        <button id="nextBtn" onClick={nextScene} style={{ background: '#007bff', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Next</button>
-                        <button id="restartBtn" onClick={restart} style={{ background: '#dc3545', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Restart</button>
-                    </div>
+                    
                     {/* */}
                    {/* <div className={currentSceneIndex === 12 ? 'scene active' : 'scene'} id="scene12">
                         <div className="scene-content">
@@ -1357,7 +1350,27 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
+                
             </div>
+             <div className="controls" style={{
+                //  position: 'absolute',
+                //  bottom: '20px',
+                  left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: '1000' }}>
+                        <button id="prevBtn" onClick={prevScene} style={{ background: '#007bff', color: 'white',
+                             padding: '10px 20px',
+                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Previous</button>
+                        <button id="playPauseBtn" onClick={togglePlayPause} style={{ background: '#6c757d', color: 'white', 
+                            padding: '10px 20px', 
+                            border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                            {isPlaying ? 'Pause' : 'Play'}
+                        </button>
+                        <button id="nextBtn" onClick={nextScene} style={{ background: '#007bff', color: 'white',
+                             padding: '10px 20px',
+                              border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Next</button>
+                        <button id="restartBtn" onClick={restart} style={{ background: '#dc3545', color: 'white', 
+                            padding: '10px 20px',
+                             border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Restart</button>
+                    </div>
         </div>
     )
 }

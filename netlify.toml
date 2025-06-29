@@ -3,8 +3,8 @@ from="/*"
 to="/index.html"
 status=200
 [build]
-  command : "npm run build"
-   commandOrigin: ui
+  command = "npm run build"
+   commandOrigin= ui
    publish: /opt/build/repo/build
    publishOrigin: ui
    environment: - NODE_VERSION

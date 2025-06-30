@@ -19,7 +19,7 @@ function DemoSection() {
             <div className="demo-preview">
                 <div className="demo-placeholder">
                     <div className="demo-content">
-                        <div className="demo-icon">🎯</div>
+                        <div className="demo-icon">⏰</div>
                         <h3 style={{color: "white",marginBottom: "1rem"}}>Interactive Demo Coming Soon</h3>
                         <p style={{color: "#b0b0b0"}}>See how our AI prevented $44.7M in losses this quarter</p>
                     </div>

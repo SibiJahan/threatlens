@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState,useCallback } from "react";
-import "./Slider.css"; 
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import "./Slider.css";
 import { motion } from 'framer-motion';
 
 const points = [
@@ -11,41 +11,40 @@ const points = [
   { topic: "Handle 10x volume without hiring", description: "Process 100,000+ samples daily with the same team size. Built for in-house SOCs and global MSSPs managing dozens of clients." },
 ];
 
-
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [prevIndex, setPrevIndex] = useState(null);
+  const [direction, setDirection] = useState(1); // 1 for next (right), -1 for prev (left)
   const timeoutRef = useRef(null);
   const interval = 4000;
 
   const goToNext = useCallback(() => {
     clearTimeout(timeoutRef.current);
-    setPrevIndex(currentIndex);
+    setDirection(1); // Set direction to next
     setCurrentIndex((prev) => (prev + 1) % points.length);
-  }, [currentIndex]); 
-  
+  }, []);
+
   const resetTimer = useCallback(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       goToNext();
     }, interval);
-  }, [goToNext, interval]); 
+  }, [goToNext, interval]);
 
- useEffect(() => {
-  resetTimer();
-  return () => clearTimeout(timeoutRef.current);
-}, [currentIndex, resetTimer]); 
+  useEffect(() => {
+    resetTimer();
+    return () => clearTimeout(timeoutRef.current);
+  }, [currentIndex, resetTimer]);
 
   const goToPrev = () => {
     clearTimeout(timeoutRef.current);
-    setPrevIndex(currentIndex);
+    setDirection(-1); // Set direction to prev
     setCurrentIndex((prev) => (prev - 1 + points.length) % points.length);
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="slider-demo-section"
-     initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7 }}
@@ -58,8 +57,13 @@ const Slider = () => {
             <div className="slide-wrapper">
               {points.map((point, i) => {
                 let className = "slide";
-                if (i === currentIndex) className += " active";
-                else if (i === prevIndex) className += " exit-left";
+                if (i === currentIndex) {
+                  className += " active";
+                } else if (i === (currentIndex - direction + points.length) % points.length) {
+                  // This condition identifies the slide that was *just* active
+                  // and is now moving out.
+                  className += direction === 1 ? " exit-left" : " exit-right";
+                }
                 return (
                   <div key={i} className={className}>
                     <div className="slide-content">

@@ -16,12 +16,12 @@ function Features() {
   };
 
   const featuresList = [
-      { icon: '🔍', title: 'Multi-Format Analysis', description: 'Submit files, URLs, IP addresses, domain names, or hashes for analysis. See detailed threat reports with IoCs, behavior analysis, and risk scoring.' },
-      { icon: '🧠', title: 'Smart Detection Engine', description: 'Get accurate malware family identification, anomaly detection, and threat classification from AI models trained on millions of samples.' },
-      { icon: '🛡️', title: 'Threat Context', description: 'Act on automated reports that explain the significance of the compromised infrastructure, the exploitation impact, potential financial losses, and compliance risks.' },
-      { icon: '📊', title: 'Compliance Tracking', description: 'See how your infrastructure meets GDPR, HIPAA, SOC2 Type II, and PCI DSS 4.0 requirements. Get actionable recommendations to address compliance gaps.' },
-      { icon: '🔐', title: 'Out-of-The-Box Integrations', description: 'Connect your security tools: Splunk, Amazon GuardDuty and AWS Security Hub, CrowdStrike, ServiceNow, Palo Alto, Kubernetes, and 1,200 more.' },
-      { icon: '⚡', title: 'Developer-First API', description: 'Integrate threat analysis into your custom security stack with our RESTful API. Use comprehensive documentation to get up and running in minutes, not months.' },
+      { icon: '🔬', title: 'Multi-Format Analysis', description: 'Submit files, URLs, IP addresses, domain names, or hashes for analysis. See detailed threat reports with IoCs, behavior analysis, and risk scoring.' },
+      { icon: '🎯', title: 'Smart Detection Engine', description: 'Get accurate malware family identification, anomaly detection, and threat classification from AI models trained on millions of samples.' },
+      { icon: '🚨', title: 'Threat Context', description: 'Act on automated reports that explain the significance of the compromised infrastructure, the exploitation impact, potential financial losses, and compliance risks.' },
+      { icon: '📡', title: 'Compliance Tracking', description: 'See how your infrastructure meets GDPR, HIPAA, SOC2 Type II, and PCI DSS 4.0 requirements. Get actionable recommendations to address compliance gaps.' },
+      { icon: '✨', title: 'Out-of-The-Box Integrations', description: 'Connect your security tools: Splunk, Amazon GuardDuty and AWS Security Hub, CrowdStrike, ServiceNow, Palo Alto, Kubernetes, and 1,200 more.' },
+      { icon: '🥇', title: 'Developer-First API', description: 'Integrate threat analysis into your custom security stack with our RESTful API. Use comprehensive documentation to get up and running in minutes, not months.' },
   ];
 
   return (

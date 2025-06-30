@@ -932,7 +932,7 @@ function Dashboard() {
                         <div className="scene-content">
                             <h2 style={{animation: "fadeInZoom 1s ease-in-out forwards"}}>Natural Language Security Assistant</h2>
                             <div style={{ textAlign: 'center', margin: '40px 0' }}>
-                                <div
+                                {/* <div
                                     style={{
                                         width: '120px',
                                         height: '120px',
@@ -946,8 +946,8 @@ function Dashboard() {
                                     }}
                                 >
                                     <span style={{ fontSize: '60px' }}>🎤</span>
-                                </div>
-                                <h3 style={{animation: "fadeInZoom 1s ease-in-out forwards"}}>Ask me anything about your security in plain English</h3>
+                                </div> */}
+                                <h3 style={{animation: "fadeInZoom 1s ease-in-out forwards"}}>ThreatLens Core Engine Powered with LLM</h3>
                             </div>
                             <div
                                 style={{
@@ -956,7 +956,7 @@ function Dashboard() {
                                     borderRadius: '15px',
                                 }}
                             >
-                                <h3 style={{animation: "fadeInStep 0.8s ease forwards 0.6s", opacity: 0}}>Real Examples from Today:</h3>
+                                <h3 style={{animation: "fadeInStep 0.8s ease forwards 0.3s", opacity: 0}}>Real Examples from Today:</h3>
                                 <div
                                     style={{
                                         background: 'rgba(0, 150, 255, 0.1)',
@@ -965,11 +965,11 @@ function Dashboard() {
                                         margin: '15px 0',
                                     }}
                                 >
-                                    <p style={{ color: '#0096FF', fontWeight: 'bold',animation: "fadeInStep 0.8s ease forwards 0.9s", opacity: 0 }}>
+                                    <p style={{ color: '#0096FF', fontWeight: 'bold',animation: "fadeInStep 0.8s ease forwards 0.6s", opacity: 0 }}>
                                         Q: "Which of our databases could be accessed if someone compromised
                                         our Jenkins server?"
                                     </p>
-                                    <p style={{ marginTop: '10px' ,animation: "fadeInStep 0.8s ease forwards 1.2s", opacity: 0}}>
+                                    <p style={{ marginTop: '10px' ,animation: "fadeInStep 0.8s ease forwards 0.9s", opacity: 0}}>
                                         <strong>AI:</strong> Your Jenkins server has stored credentials for 3
                                         production databases: customer-db-prod (4.7M records),
                                         transactions-db (890GB), and analytics-warehouse (12TB). If
@@ -984,13 +984,13 @@ function Dashboard() {
                                         padding: '20px',
                                         borderRadius: '10px',
                                         margin: '15px 0',
-                                        animation: "fadeInStep 0.8s ease forwards 1.5s", opacity: 0
+                                        animation: "fadeInStep 0.8s ease forwards 1.2s", opacity: 0
                                     }}
                                 >
-                                    <p style={{ color: '#00D84A', fontWeight: 'bold' ,animation: "fadeInStep 0.8s ease forwards 1.8s", opacity: 0}}>
+                                    <p style={{ color: '#00D84A', fontWeight: 'bold' ,animation: "fadeInStep 0.8s ease forwards 1.5s", opacity: 0}}>
                                         Q: "Are we vulnerable to the new Microsoft Exchange zero-day?"
                                     </p>
-                                    <p style={{ marginTop: '10px' ,animation: "fadeInStep 0.8s ease forwards 2.1s", opacity: 0}}>
+                                    <p style={{ marginTop: '10px' ,animation: "fadeInStep 0.8s ease forwards 1.8s", opacity: 0}}>
                                         <strong>AI:</strong> Yes, 2 of your 5 Exchange servers (EXCH-NYC-01
                                         and EXCH-SF-02) are vulnerable. They're running version 15.2.1118.7.
                                         I've already applied temporary mitigations and scheduled patching for

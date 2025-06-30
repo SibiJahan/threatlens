@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  /* overflow: auto; */
   box-sizing: border-box;
 }
 :root {
@@ -387,7 +387,7 @@ body {
   color: white; */
     background: linear-gradient(135deg, #0a0f12, #141a1e);
   color: #ffffff;
-
+  overflow-x: hidden;
   min-height: 100vh;
 }
 

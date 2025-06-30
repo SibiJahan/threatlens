@@ -1,12 +1,11 @@
-import React from 'react'
-import Header from './Header'
-import DemoSection from './DemoSection'
-import Features from './Features'
-import FinalCTA from './FinalCTA'
-import Footer from './Footer'
-import Hero from './Hero'
-import Slider from './Slider'
-
+import React from 'react';
+import Header from './Header';
+import Hero from './Hero';
+import DemoSection from './DemoSection';
+import Features from './Features';
+import Slider from './Slider';
+import FinalCTA from './FinalCTA';
+import Footer from './Footer';
 
 function Landing() {
   return (
@@ -16,10 +15,10 @@ function Landing() {
         <DemoSection/>
         <Features/>
         <Slider/>
-         <FinalCTA/>
-         <Footer/>
+        <FinalCTA/>
+        <Footer/>
     </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function DemoSection() {
   return (
-    <div className='landingall'>
-    <div className='landingbody'>
-    <section className="demo-section" id="demo">
-        <div className="container">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7 }}
+      className='landingall'
+    >
+      <div className='landingbody'>
+        <section className="demo-section" id="demo">
+          {/* ... rest of the component JSX ... */}
+          <div className="container">
             <h2 className="section-title">Experience ThreatLens in Action</h2>
             
             <div className="demo-preview">
@@ -29,12 +37,11 @@ function DemoSection() {
                     </span>
                 </div>
             </div>
-        </div>
-    </section>
-    </div>
-    </div>
-
-  )
+          </div>
+        </section>
+      </div>
+    </motion.div>
+  );
 }
 
-export default DemoSection
+export default DemoSection;

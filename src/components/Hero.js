@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function Hero() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const handleExploreClick = () => {
-        navigate('/dashboard');
-    };
+    // const handleExploreClick = () => {
+    //     navigate('/dashboard');
+    // };
 
     const containerVariants = {
       hidden: { opacity: 0 },
@@ -39,7 +39,9 @@ function Hero() {
                     API-first malware detection service for security teams. Upload files, check URLs, or submit hashes to get threat reports with IoC extraction, actionable intelligence, and compliance tracking in real-time.
                 </motion.p>
                 <motion.div className="hero-buttons" variants={itemVariants}>
-                    <a href="#features" onClick={handleExploreClick} className="btn-primary">Explore Platform</a>
+                    <a href="#features" 
+                    // onClick={handleExploreClick}
+                     className="btn-primary">Explore Platform</a>
                     <a href="#waitlist" className="btn-secondary">Join Waitlist</a>
                 </motion.div>
             </motion.div>

@@ -19,8 +19,8 @@ function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                <li ><a href="/Dashboard">Features</a></li>
-                <li ><a href="/Dashboard">Contact</a></li>
+                <li ><a href="#features">Features</a></li>
+                <li ><a href="#waitlist">Contact</a></li>
             </motion.ul>
             <motion.a 
                 href="#waitlist" 

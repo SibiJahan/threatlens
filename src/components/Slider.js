@@ -73,14 +73,15 @@ const Slider = () => {
                   </div>
                 );
               })}
-            </div>
-
-            <button className="arrow left-arrow" onClick={goToPrev}>
+               <button className="arrow left-arrow" onClick={goToPrev}>
               &#8249;
             </button>
             <button className="arrow right-arrow" onClick={goToNext}>
               &#8250;
             </button>
+            </div>
+
+           
           </div>
         </div>
       </div>

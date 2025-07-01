@@ -34,8 +34,8 @@ function FinalCTA() {
             <motion.h2 variants={itemVariants}>Ready to Transform Your Security Operations?</motion.h2>
             <motion.p variants={itemVariants}>Join our early access program and be among the first to benefit from next-generation threat intelligence powered by AI.</motion.p>
             <motion.div className="hero-buttons" variants={itemVariants}>
-                <a href="mailto:hello@threatlenscore.com?subject=Early Access Request" className="btn-primary">Explore Platform</a>
-                <a href="mailto:partnerships@threatlenscore.com?subject=Partnership Inquiry" className="btn-secondary">Join Waitlist</a>
+                <a href="mailto:hello@threatlenscore.com?subject=Early Access Request" className="btn-primary">Request Early Access</a>
+                <a href="mailto:partnerships@threatlenscore.com?subject=Partnership Inquiry" className="btn-secondary">Become Partner</a>
             </motion.div>
         </div>
     </motion.section>

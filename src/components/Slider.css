@@ -82,7 +82,8 @@ body,
   height: 100%;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  /* MODIFIED: Changed transition duration from 0.6s to 1s */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +116,7 @@ body,
   max-width: 90%;
   height: 100%;           
   color: #eee;
+  box-sizing: border-box; /* Added for consistent padding behavior */
 }
 
 /* Topic (headline) */
@@ -132,25 +134,29 @@ body,
   color: #ccc;
 }
 
-/* Navigation arrows */
+/* MODIFIED: Navigation arrows */
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-10%);
   background: rgba(255, 255, 255, 0.15);
-  border: none;
+  /* FIX: Added a transparent border to stabilize the element's position on hover */
+  border: 1px solid transparent;
   color: white;
   font-size: 2.4rem;
   padding: 10px 16px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 5;
-  transition: background 0.3s ease;
+  /* UPDATED: Added 'border-color' to the transition for a smoother effect */
+  /* transition: background 0.3s ease, border-color 0.3s ease; */
+  will-change: transform;
 }
 
-.arrow:hover {
-  background:#111111;
-   /* rgba(255, 255, 255, 0.35); */
+arrow:hover {
+  background: #111111;
+  /* Make the border match the new background on hover */
+  border-color: #111111;
 }
 
 .left-arrow {
@@ -160,4 +166,39 @@ body,
 
 .right-arrow {
   right: 20px;
+}
+
+/* ADDED: Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 1.8rem;
+    padding: 8px 12px;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .slider {
+    height: 400px; /* Optionally increase height on mobile for better text fit */
+  }
+
+  .slide-content {
+    /* Add horizontal padding to prevent text from overlapping arrows */
+    padding-left: 45px;
+    padding-right: 45px;
+    max-width: 100%;
+  }
+
+  .point-topic {
+    font-size: 1.4rem;
+  }
+
+  .point-description {
+    font-size: 1rem;
+  }
 }

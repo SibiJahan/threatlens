@@ -27,13 +27,13 @@ function DemoSection() {
                 
                 <div style={{display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap"}}>
                     <span style={{background:" rgba(0, 255, 255, 0.1)", padding: "8px 16px", borderRadius: "20px", fontSize: "0.9rem", border: "1px solid rgba(0, 255, 255, 0.3)"}}>
-                        ⚡ Real-time Analysis
+                        ⏱️ Real-time Analysis
                     </span>
                     <span style={{background:" rgba(0, 255, 255, 0.1)", padding: "8px 16px", borderRadius: "20px", fontSize: "0.9rem", border: "1px solid rgba(0, 255, 255, 0.3)"}}>
-                        🧠 AI-Powered Insights
+                        🤖 AI-Powered Insights
                     </span>
                     <span style={{background:" rgba(0, 255, 255, 0.1)", padding: "8px 16px", borderRadius: "20px", fontSize: "0.9rem", border: "1px solid rgba(0, 255, 255, 0.3)"}}>
-                        💰 Business Impact
+                        💸 Business Impact
                     </span>
                 </div>
             </div>

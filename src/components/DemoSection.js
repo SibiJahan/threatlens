@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function DemoSection() {
   return (
@@ -19,8 +20,11 @@ function DemoSection() {
             <div className="demo-preview">
                 <div className="demo-placeholder">
                     <div className="demo-content">
-                        <div className="demo-icon">⏰</div>
-                        <h3 style={{color: "white",marginBottom: "1rem"}}>Interactive Demo Coming Soon</h3>
+                        <div className="demo-icon">▶️</div>
+                        {/* <h3 style={{color: "white",marginBottom: "1rem"}}>Interactive Demo Coming Soon</h3> */}
+                        <Link to="/dashboard"
+                    // onClick={handleExploreClick}
+                     className="btn-primary">Interactive Demo</Link>
                         <p style={{color: "#b0b0b0"}}>See how our AI prevented $44.7M in losses this quarter</p>
                     </div>
                 </div>
